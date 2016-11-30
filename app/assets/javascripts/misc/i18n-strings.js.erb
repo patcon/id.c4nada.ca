@@ -9,6 +9,8 @@ window.LoginGov = window.LoginGov || {};
   'instructions.password.strength.iv',
   'instructions.password.strength.v',
   'valid_email.validations.email.invalid',
+  'shared.time.minutes.one',
+  'shared.time.minutes.other',
   'zxcvbn.feedback.Use a few words, avoid common phrases',
   'zxcvbn.feedback.No need for symbols, digits, or uppercase letters',
   'zxcvbn.feedback.Add another word or two_ Uncommon words are better_',
@@ -40,7 +42,19 @@ window.LoginGov = window.LoginGov || {};
 
 window.LoginGov.I18n = {
   strings: {},
-  t: function(key) { return this.strings[key]; }
+  t: function(key, args) {
+    args = args || {};
+
+    if ('count' in args) {
+      if (args.count === 1) {
+        key += '.one';
+      } else {
+        key += '.other';
+      }
+    }
+
+    return this.strings[key];
+  }
 };
 
 <% keys.each do |key| %>

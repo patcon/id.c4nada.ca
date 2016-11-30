@@ -7,3 +7,10 @@ en:
     nav_auth:
       welcome: Welcome
       my_account: My account
+    time:
+      minutes:
+        one: '%{count} minute'
+        other: '%{count} minutes'
+      minutes:
+        one: '%{count} second'
+        other: '%{count} seconds'

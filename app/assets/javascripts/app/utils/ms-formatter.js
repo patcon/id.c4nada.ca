@@ -1,3 +1,5 @@
+const I18n = window.LoginGov.I18n;
+
 function pluralize(word, count) {
   return `${word}${count !== 1 ? 's' : ''}`;
 }
@@ -17,8 +19,8 @@ export default (milliseconds) => {
   const minutes = parseInt(seconds / 60, 10);
   const remainingSeconds = parseInt(seconds % 60, 10);
 
-  const displayMinutes = formatMinutes(minutes);
-  const displaySeconds = formatSeconds(remainingSeconds);
+  const displayMinutes = I18n.t('shared.time.minutes', { count: minutes });
+  const displaySeconds = I18n.t('shared.time.seconds', { count: remainingSeconds });
 
   return `${displayMinutes} and ${displaySeconds}`;
 };
