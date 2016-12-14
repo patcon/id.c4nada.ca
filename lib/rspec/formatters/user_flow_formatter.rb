@@ -13,6 +13,20 @@ Capybara::Screenshot.after_save_html do |path|
   $cur_screenshot_link = uri
 end
 
+Capybara::Screenshot.after_save_screenshot do |path|
+  puts path
+  binding.pry
+  puts path
+end
+
+# Capybara::Screenshot.register_filename_prefix_formatter(:user_flow_formatter) do |example|
+#   "merp-screenshot_#{example.description.gsub(' ', '-').gsub(/^.*\/spec\//,'')}"
+# end
+
+# Capybara::Screenshot.register_filename_prefix_formatter(:rspec) do |example|
+#   "merp-merp-screenshot_#{example.description.gsub(' ', '-').gsub(/^.*\/spec\//,'')}"
+# end
+
 class UserFlowFormatter < RSpec::Core::Formatters::DocumentationFormatter
   # This registers the notifications this formatter supports, and tells
   # us that this was written against the RSpec 3.x formatter API.

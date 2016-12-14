@@ -10,7 +10,6 @@ feature 'SP-initiated authentication with login.gov', devise: true, user_flow: t
 
     it 'prompts the user to log in or sign up' do
       screenshot_and_save_page
-      screenshot_and_open_image
     end
 
     context 'when choosing Create Account' do
@@ -129,6 +128,40 @@ feature 'SP-initiated authentication with login.gov', devise: true, user_flow: t
               screenshot_and_save_page
             end
           end
+        end
+      end
+    end
+
+    context 'without a valid username and password' do
+      context 'when choosing "Forgot your password?"' do
+        before do
+          click_link t('links.passwords.forgot')
+        end
+
+        it 'prompts for my email address' do  
+          screenshot_and_save_page
+        end
+
+        context 'with not_a_real_email_dot.com submitted' do
+          before do
+            fill_in 'user_email', with: 'not_a_real_email_dot.com'
+            # page.find('.btn-primary').click
+          end
+
+          it 'lets me enter some text' do
+            screenshot_and_save_page
+          end
+
+          it 'displays a useful error' do
+            page.find('.btn-primary').click
+            screenshot_and_save_page
+          end
+
+          # it 'does this' do
+          #   fill_in 'user_email', with: 'not_a_real_email_dot.com'
+          #   screenshot_and_save_page
+          #   page.find('.btn-primary').click
+          # end
         end
       end
     end
