@@ -10,12 +10,18 @@ es:
     passwords:
       forgot: NOT TRANSLATED YET
     phone_confirmation:
-      fallback_to_sms: NOT TRANSLATED YET
-      fallback_to_voice: NOT TRANSLATED YET
+      auth_app_fallback_html: NOT TRANSLATED YET
+      fallback_to_sms_html: NOT TRANSLATED YET
+      fallback_to_voice_html: NOT TRANSLATED YET
     privacy_policy: NOT TRANSLATED YET
     resend: NOT TRANSLATED YET
     sign_in: NOT TRANSLATED YET
     sign_out: NOT TRANSLATED YET
     cancel: NOT TRANSLATED YET
     two_factor_authentication:
-      resend_code: NOT TRANSLATED YET
+      app: NOT TRANSLATED YET
+      voice: NOT TRANSLATED YET
+      sms: NOT TRANSLATED YET
+      resend_code:
+        sms: NOT TRANSLATED YET
+        voice: NOT TRANSLATED YET

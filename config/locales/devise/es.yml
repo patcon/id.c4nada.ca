@@ -84,7 +84,7 @@ es:
       please_try_again_html: NOT TRANSLATED YET
       recovery_code_fallback:
         link: NOT TRANSLATED YET
-        text: NOT TRANSLATED YET
+        text_html: NOT TRANSLATED YET
       recovery_code_header_text: NOT TRANSLATED YET
       recovery_code_prompt: NOT TRANSLATED YET
       totp_fallback:
