@@ -89,7 +89,7 @@ es:
       recovery_code_prompt: NOT TRANSLATED YET
       totp_fallback:
         sms_link_text: NOT TRANSLATED YET
-        text: NOT TRANSLATED YET
+        text_html: NOT TRANSLATED YET
         voice_link_text: NOT TRANSLATED YET
       totp_header_text: NOT TRANSLATED YET
       totp_info: NOT TRANSLATED YET

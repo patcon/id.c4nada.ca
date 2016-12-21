@@ -8,7 +8,8 @@ es:
       voice:
         confirm_code_html: NOT TRANSLATED YET
         fallback_html: NOT TRANSLATED YET
-      totp_intro_html: NOT TRANSLATED YET
+      authenticator:
+        confirm_code_html: NOT_TRANSLATED_YET
       wrong_number_html: NOT TRANSLATED YET
     password:
       forgot: NOT TRANSLATED YET
