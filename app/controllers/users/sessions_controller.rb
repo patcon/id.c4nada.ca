@@ -3,6 +3,7 @@ module Users
     include ::ActionView::Helpers::DateHelper
 
     skip_before_action :session_expires_at, only: [:active]
+    skip_before_action :require_no_authentication, only: [:create]
     before_action :confirm_two_factor_authenticated, only: [:update]
 
     def new
@@ -37,6 +38,13 @@ module Users
                           app: APP_NAME,
                           minutes: Figaro.env.session_timeout_in_minutes)
       redirect_to root_url
+    end
+
+    protected
+
+    def require_no_authentication
+      return super if user_fully_authenticated?
+      redirect_to destroy_user_session_path if current_user
     end
 
     private
