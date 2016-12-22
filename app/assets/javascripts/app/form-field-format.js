@@ -7,7 +7,7 @@ import ZipCodeFormatter from './modules/zip-code-formatter';
 function formatForm() {
   const formats = [
     ['.dob', new DateFormatter()],
-    ['[type=tel]', new PhoneFormatter()],
+    ['.phone', new PhoneFormatter()],
     ['.ssn', new SocialSecurityNumberFormatter()],
     ['.zipcode', new ZipCodeFormatter()],
     ['.mfa', new OtpCodeFormatter()],
