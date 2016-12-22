@@ -16,7 +16,7 @@ feature 'User profile' do
     end
 
     context 'LOA3 account' do
-      let(:profile) { create(:profile, :active, :verified, pii: { ssn: '1234', dob: '1920-01-01' }) }
+      let(:profile) { create(:profile, :active, :verified, pii: { ssn: '111', dob: '1920-01-01' }) }
 
       it 'shows a "Verified Account" badge with no tooltip' do
         expect(page).to have_content(t('headings.profile.verified_account'))
