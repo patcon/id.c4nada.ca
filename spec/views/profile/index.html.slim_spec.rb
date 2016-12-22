@@ -77,7 +77,7 @@ describe 'profile/index.html.slim' do
     end
 
     context 'LOA3 account' do
-      let(:pii_attrs) { { ssn: '1111', dob: '1920-01-01'} }
+      let(:pii_attrs) { { ssn: '1111', dob: '1920-01-01' } }
       let(:profile) { create(:profile, :active, :verified, pii: pii_attrs) }
 
       it 'shows a "Verified Account" badge with no tooltip' do
