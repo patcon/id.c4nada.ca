@@ -17,8 +17,7 @@
     class: 'h5 blue sans-serif underline hint--top hint--no-animate',
     tabindex: 0,
     'aria-label': t('tooltips.profile_idv'))
-  - unless current_user.decorate.identity_not_verified?
-    .h6.regular.right.border.rounded.p1.regular = t('headings.profile.verified_account')
+  = render partial: current_user.decorate.verified_account_partial
   .mt2.mb4
     .py-12p.border-top
       .clearfix.mxn1
@@ -47,10 +46,7 @@
 
 h2.h3.my0
   = t('headings.profile.login_info')
-  - if current_user.decorate.identity_not_verified?
-    .h6.right.border.rounded.p1.regular
-      = t('headings.profile.basic_account')
-      = tooltip(t('tooltips.verified_account'))
+  = render partial: current_user.decorate.basic_account_partial
 .mt2.mb4
   .py-12p.border-top
     .clearfix.mxn1
