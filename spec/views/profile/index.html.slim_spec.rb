@@ -61,4 +61,31 @@ describe 'profile/index.html.slim' do
 
     expect(rendered).to have_content t('headings.profile.account_history')
   end
+
+  context 'account status badges' do
+    before { allow(view).to receive(:current_user).and_return(profile.user) }
+
+    context 'LOA1 account' do
+      let(:profile) { build(:profile) }
+
+      it 'shows a "Basic Account" badge with a tooltip' do
+        render
+
+        expect(rendered).to have_content(t('headings.profile.basic_account'))
+        expect(rendered).to have_css("[aria-label='#{t('tooltips.verified_account')}']")
+      end
+    end
+
+    context 'LOA3 account' do
+      let(:pii_attrs) { { ssn: '1111', dob: '1920-01-01'} }
+      let(:profile) { create(:profile, :active, :verified, pii: pii_attrs) }
+
+      it 'shows a "Verified Account" badge with no tooltip' do
+        assign(:decrypted_pii, Pii::Attributes.new_from_hash(pii_attrs))
+
+        render
+        expect(rendered).to have_content(t('headings.profile.verified_account'))
+      end
+    end
+  end
 end
