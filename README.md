@@ -18,6 +18,10 @@ The fork will make use of an unofficial [voter registration check
 API](https://github.com/patcon/can-ereg-api). A potential use-case is described
 [here](https://github.com/patcon/can-ereg-api#unofficial-national-digital-identity-system).
 
+**Related forks:**
+
+* [`identity-proofer-gem`](https://github.com/patcon/identity-proofer-gem-c4nada)
+
 ### Local development
 
 #### Dependencies
