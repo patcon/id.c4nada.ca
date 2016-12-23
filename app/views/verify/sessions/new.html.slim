@@ -22,7 +22,7 @@ h1.h3.my0 = t('idv.titles.session.basic')
           label: t('idv.form.state'), required: true
       .sm-col.sm-col-4.px1
         = f.input :zipcode, label: t('idv.form.zipcode'), required: true,
-          pattern: '(\d{5}([\-]\d{4})?)',
+          pattern: '([A-Z0-9]{3}([\ ][A-Z0-9]{3})?)',
           input_html: { class: 'zipcode', value: idv_profile_form.zipcode }
   .mb4
     .mt0.mb3.pb-tiny.border-bottom.border-teal = t('profile.index.dob')

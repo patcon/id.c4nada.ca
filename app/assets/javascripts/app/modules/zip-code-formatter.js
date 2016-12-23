@@ -4,15 +4,15 @@ import { DelimitedTextFormatter } from 'field-kit';
  * @const
  * @private
  */
-const DIGITS_PATTERN = /^\d*$/;
+const DIGITS_PATTERN = /^[A-Za-z0-9]*$/;
 
 /**
  * @extends DelimitedTextFormatter
  */
 class ZipCodeFormatter extends DelimitedTextFormatter {
   constructor() {
-    super('-', true);
-    this.maximumLength = 9 + 1;
+    super(' ', true);
+    this.maximumLength = 6 + 1;
   }
 
   /**
@@ -20,7 +20,7 @@ class ZipCodeFormatter extends DelimitedTextFormatter {
    * @returns {boolean}
    */
   hasDelimiterAtIndex(index) {
-    return index === 5;
+    return index === 3;
   }
 
   /**
@@ -32,6 +32,7 @@ class ZipCodeFormatter extends DelimitedTextFormatter {
    * @returns {boolean}
    */
   isChangeValid(change, error) {
+    change.proposed.text = change.proposed.text.toUpperCase();
     if (DIGITS_PATTERN.test(change.inserted.text)) {
       return super.isChangeValid(change, error);
     }
