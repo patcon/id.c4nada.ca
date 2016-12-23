@@ -46,7 +46,7 @@ module Verify
 
     def profile_params
       params.require(:profile).permit(
-        :first_name, :last_name, :dob, :ssn, :address1, :address2, :city, :state, :zipcode
+        :first_name, :last_name, :dob, :address1, :address2, :city, :state, :zipcode
       )
     end
   end

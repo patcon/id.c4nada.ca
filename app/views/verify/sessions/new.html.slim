@@ -31,12 +31,6 @@ h1.h3.my0 = t('idv.titles.session.basic')
       input_html: { class: 'dob', value: idv_profile_form.dob,
         'aria-describedby': 'dob-instructs' }
     #dob-instructs.hide Must be in mm/dd/yyyy format
-  .mb4
-    = f.input :ssn,
-      label: t('idv.form.ssn_label_html', tooltip: tooltip(t('tooltips.ssn'))),
-      required: true,
-      pattern: '^\d{3}-?\d{2}-?\d{4}$',
-      input_html: { class: 'ssn', value: idv_profile_form.ssn }
   .mt5
     button type='submit' class='btn btn-primary btn-wide' = t('forms.buttons.continue')
     .mt1 = link_to t('idv.messages.cancel_link'), verify_cancel_path

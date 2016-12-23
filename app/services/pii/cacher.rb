@@ -43,7 +43,7 @@ module Pii
     end
 
     def stale_fingerprints?(profile)
-      stale_email_fingerprint? || stale_ssn_signature?(profile)
+      stale_email_fingerprint?
     end
 
     def stale_email_fingerprint?
