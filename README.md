@@ -9,6 +9,15 @@ Identity-IdP (Upaya)
 
 A Identity Management System powering login.gov.
 
+### About this fork
+
+The goal of this fork is a create a proof-of-concept for a
+citizen-bootstrapped _national digital identity system_ for Canadians.
+
+The fork will make use of an unofficial [voter registration check
+API](https://github.com/patcon/can-ereg-api). A potential use-case is described
+[here](https://github.com/patcon/can-ereg-api#unofficial-national-digital-identity-system).
+
 ### Local development
 
 #### Dependencies
