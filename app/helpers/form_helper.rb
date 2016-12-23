@@ -5,6 +5,27 @@ module FormHelper
 
   # rubocop:disable MethodLength, WordArray
   # This method is single statement spread across many lines for readability
+  def ca_provinces_territories
+    [
+      ['Alberta', 'AB'],
+      ['British Columbia', 'BC'],
+      ['Manitoba', 'MB'],
+      ['New Brunswick', 'NB'],
+      ['Newfoundland', 'NL'],
+      ['Nova Scotia', 'NS'],
+      ['Ontario', 'ON'],
+      ['Prince Edward Island', 'PE'],
+      ['Quebec', 'QC'],
+      ['Saskatchewan', 'SK'],
+      ['Northwest Territories', 'NT'],
+      ['Nunavut', 'NU'],
+      ['Yukon', 'YT'],
+    ]
+  end
+  # rubocop:enable MethodLength, WordArray
+
+  # rubocop:disable MethodLength, WordArray
+  # This method is single statement spread across many lines for readability
   def us_states_territories
     [
       ['Alabama', 'AL'],
