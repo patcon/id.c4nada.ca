@@ -13,7 +13,7 @@ en:
       pattern_mismatch:
         dob: Your date of birth must be entered in as mm/dd/yyyy
         ssn: 'Your Social Security Number must be entered in as ###-##-####'
-        zipcode: 'Your zipcode must be entered in as #####-####'
+        zipcode: 'Your postal code must be 6 characters long'
     form:
       address1: Street address 1
       address2: Street address 2 (optional)
@@ -28,8 +28,8 @@ en:
       password: Password
       phone: Phone
       ssn_label_html: Social Security Number %{tooltip}
-      state: State
-      zipcode: ZIP Code
+      state: Province
+      zipcode: Postal Code
     index:
       cancel_link: No, I don’t have it
       continue_link: Yes, continue
