@@ -8,8 +8,6 @@ module Verify
     helper_method :idv_params
 
     def confirm_idv_steps_complete
-      redirect_to verify_finance_path unless idv_finance_complete?
-      redirect_to verify_phone_path unless idv_phone_complete?
     end
 
     def confirm_current_password
