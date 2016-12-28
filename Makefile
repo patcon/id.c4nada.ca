@@ -31,6 +31,6 @@ fast_test: $(CONFIG)
 	bundle exec rspec --exclude-pattern "**/features/accessibility/*_spec.rb"
 
 run: $(CONFIG)
-	foreman start
+	foreman start --port 3000
 
 .PHONY: setup all lint run test check brakeman
