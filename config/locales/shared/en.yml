@@ -4,6 +4,7 @@ en:
     footer_lite:
       gsa: U.S. General Services Administration
     nav_auth:
+      verify: Get verified
       my_account: My account
       welcome: Welcome
     usa_banner:
