@@ -32,12 +32,12 @@ GIT
 
 GIT
   remote: https://github.com/patcon/identity-proofer-gem.git
-  revision: cf2445c7150ab77f5c7553771bd02dca411fa82d
+  revision: b43a4b135ec653a36b93851f958bb1689bbe95e0
   branch: c4nada
   specs:
     proofer (1.0.0)
       dotenv
-      svelte
+      httparty
 
 GIT
   remote: https://github.com/patcon/svelte.git
@@ -339,7 +339,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.0)
     multi_json (1.12.1)
-    multi_xml (0.5.5)
+    multi_xml (0.6.0)
     multipart-post (2.0.0)
     nenv (0.3.0)
     net-scp (1.2.1)
