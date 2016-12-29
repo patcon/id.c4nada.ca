@@ -1,12 +1,40 @@
+require 'base64'
 require 'service_provider'
+
+def private_key_enc_content
+  file = File.join(Rails.root, 'keys', 'saml.key.enc')
+  if File.exist?(file)
+    cipher_content = File.read(file)
+  elsif Figaro.env.IDP_CERT_PRIV_ENC_BASE64?
+    cipher_content = Base64.decode64(Figaro.env.IDP_CERT_PRIV_ENC_BASE64)
+  else
+    raise
+  end
+
+  cipher_content
+end
+
+def idp_cert_content
+  file = File.join(Rails.root, 'certs', 'saml.crt')
+  if File.exist?(file)
+    cipher_content = File.read(file)
+  elsif Figaro.env.IDP_CERT_PUB_BASE64?
+    cipher_content = Base64.decode64(Figaro.env.IDP_CERT_PUB_BASE64)
+  else
+    raise
+  end
+
+  cipher_content
+end
+
 
 SamlIdp.configure do |config|
   protocol = Rails.env.development? ? 'http://' : 'https://'
   api_base = protocol + Figaro.env.domain_name + '/api'
 
-  config.x509_certificate = File.read("#{Rails.root}/certs/saml.crt")
+  config.x509_certificate = idp_cert_content
   config.secret_key = OpenSSL::PKey::RSA.new(
-    File.read(Rails.root + 'keys/saml.key.enc'),
+    private_key_enc_content,
     Figaro.env.saml_passphrase
   ).to_pem
 
