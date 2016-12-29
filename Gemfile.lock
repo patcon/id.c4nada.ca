@@ -32,7 +32,7 @@ GIT
 
 GIT
   remote: https://github.com/patcon/identity-proofer-gem.git
-  revision: 0154ba6a62b821a577ec1baae52536e2f74af246
+  revision: cf2445c7150ab77f5c7553771bd02dca411fa82d
   branch: c4nada
   specs:
     proofer (1.0.0)
@@ -733,6 +733,9 @@ DEPENDENCIES
   xmlenc (~> 0.6.4)
   zonebie
   zxcvbn-js
+
+RUBY VERSION
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.13.6
