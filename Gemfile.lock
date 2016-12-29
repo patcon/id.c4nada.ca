@@ -426,7 +426,12 @@ GEM
       ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_layout (1.0.34)
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.7.1)
       actionpack (= 4.2.7.1)
       activesupport (= 4.2.7.1)
@@ -697,6 +702,7 @@ DEPENDENCIES
   rack_session_access
   rails (~> 4.2.6)
   rails-erd
+  rails_12factor
   rails_layout
   readthis
   redis-session-store
