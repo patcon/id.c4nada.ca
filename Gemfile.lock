@@ -32,7 +32,7 @@ GIT
 
 GIT
   remote: https://github.com/patcon/identity-proofer-gem.git
-  revision: b43a4b135ec653a36b93851f958bb1689bbe95e0
+  revision: 62f437a6c8dfb3c48e444df28c5cfd561764c081
   branch: c4nada
   specs:
     proofer (1.0.0)
