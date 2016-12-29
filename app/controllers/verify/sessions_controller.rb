@@ -22,7 +22,7 @@ module Verify
 
     def submit_profile
       if idv_profile_form.submit(profile_params)
-        redirect_to verify_review_url
+        redirect_to verify_phone_url
       elsif duplicate_ssn_error?
         flash[:error] = dupe_ssn_msg
         redirect_to verify_session_dupe_path

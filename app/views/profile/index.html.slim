@@ -35,6 +35,10 @@
       .clearfix.mxn1
         .sm-col.sm-col-5.px1 = t('.dob')
         .sm-col.sm-col-7.px1 #{@decrypted_pii.dob.to_date.to_formatted_s(:long)}
+    .py-12p.border-top.border-bottom
+      .clearfix.mxn1
+        .sm-col.sm-col-5.px1 = t('.phone')
+        .sm-col.sm-col-7.px1 = @decrypted_pii.phone
 
 h2.h3.my0
   = t('headings.profile.login_info')

@@ -16,6 +16,10 @@ p.mt-tiny.mb0 = t('idv.messages.review.intro')
     | #{idv_params[:city]}, #{idv_params[:state]} #{idv_params[:zipcode]}
   .mt3.h6 = t('idv.review.dob')
   .h4.bold #{idv_params[:dob].to_date.to_formatted_s(:long)}
+.mb3.p3.border.rounded
+  = link_to t('links.edit'), verify_phone_path, class: edit_btn_cls
+  .h6 Phone number
+  .h4.bold #{idv_params[:phone]}
 
 = simple_form_for(current_user, url: verify_review_path,
     html: { autocomplete: 'off', method: :put, role: 'form' }) do |f|
